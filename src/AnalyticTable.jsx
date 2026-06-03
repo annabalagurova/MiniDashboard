@@ -1,12 +1,12 @@
 import React, { useRef, useState, useEffect } from "react";
 import { use } from "react";
 
-function AnaliticTable({data}) {
+function AnalitycTable({data}) {
     const tableContainerRef = useRef(null);
     const [showScrollTop, setShowScollTop] = useState(false);
 
     // храним ширину колонки но обновляем только в момент mouth up события
-    const [colWidth, setColWidth] = useState({title: 400, amount: 500, category: 500, status: 400});
+    const [colWidth, setColWidth] = useState({title: 300, amount: 200, category: 200, status: 200});
 
     // рефы для отслеживания ресайза
     const resizeInfo = useRef (
@@ -91,7 +91,7 @@ function AnaliticTable({data}) {
     // стиль для разделителя колонок
     const resizeStyle = {
         position: 'absolute',
-        rigth: 0,
+        right: 0,
         top: 0,
         bottom: 0,
         width: '5px',
@@ -107,7 +107,7 @@ function AnaliticTable({data}) {
                 onScroll={handleScroll}
                 style={{maxHeight: '400px', overflowY: 'scroll', border: '1px solid #aaa'}}
             >
-                <table style={{tableLayout: 'fixed', width: '100$', borderCollapse: 'collapse'}}>
+                <table style={{tableLayout: 'fixed', width: '100%', borderCollapse: 'collapse'}}>
                     <thead>
                         <tr style={{position: 'sticky', top: 0, zIndex: 1, backgroundColor: '#f0f0f0'}}>
                             <th ref={thTitleRef} style={{width: colWidth.title, position: 'relative', border: '1px solid #ddd'}}>
@@ -160,4 +160,4 @@ function AnaliticTable({data}) {
     )
 };
 
-export default AnaliticTable;
+export default AnalitycTable;

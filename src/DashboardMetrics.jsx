@@ -15,16 +15,16 @@ function DashboardMetrics({filteredData}) {
     }, [filteredData]);
 
     return (
-        <div style={{display: 'flex', gap: '20px'}}>
-            <div style={{border: '1px solid #666'}}>
+        <div style={{display: 'flex', gap: '20px', justifyContent: 'center'}}>
+            <div style={{border: '1px solid #666', padding: '5px 10px 25px 10px', width: '250px', borderRadius: '20px'}}>
                 <h3>Общая сумма</h3>
                 <p>{metrics.totalAmount.toLocaleString()} руб.</p>
             </div>
-            <div style={{border: '1px solid #666'}}>
+            <div style={{border: '1px solid #666', padding: '5px 10px 25px 10px', width: '250px', borderRadius: '20px'}}>
                 <h3>Средний чек</h3>
                 <p>{metrics.avgAmount.toLocaleString()} руб.</p>
             </div>
-            <div style={{border: '1px solid #666'}}>
+            <div style={{border: '1px solid #666', padding: '5px 10px 25px 10px', width: '250px', borderRadius: '20px'}}>
                 <h3>Процент выполнения</h3>
                 <p>{metrics.successRate}%</p>
             </div>

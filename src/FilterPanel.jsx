@@ -6,10 +6,11 @@ function FilterPanel({filters, setFilters, onOpenModal}) {
         setFilters(prev => ({...prev,[name]:value}));
     };
     return (
-        <div style={{display: 'flex', gap: '15px'}}>
+        <div style={{display: 'flex', gap: '15px', justifyContent: 'center', margin: '20px'}}>
             <input
                 type="text"
                 name="search"
+                placeholder="Введите значение..."
                 value={filters.search}
                 onChange={handleChange}
             />
